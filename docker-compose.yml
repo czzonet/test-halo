@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  halo:
+    container_name: "halo"
+    ports:
+      - "23456:8090"
+    volumes:
+      - ~/.halo2:/root/.halo2
+    image: "halohub/halo:2.0.0"
+    restart: "unless-stopped"
